@@ -10,6 +10,15 @@
     
     
     <url>
+        <loc>http://codingayice.github.io/bangumi/</loc>
+        <lastmod>2022-05-14T12:44:27.888Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>http://codingayice.github.io/links/</loc>
         <lastmod>2022-05-01T08:54:39.062Z</lastmod>
         <changefreq>weekly</changefreq>
