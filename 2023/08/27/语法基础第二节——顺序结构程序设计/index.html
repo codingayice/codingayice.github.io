@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>语言基础第二节——顺序结构程序设计 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="语言基础（二）——顺序结构程序设计我们已经学会了如何编写代码让计算机输出内容和计算简单的算术表达式。这一节我们将学习通过引入变量数据类型的概念，来介绍顺序结构程序设计。
+所谓顺序结构程序设计，就是在,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="语言基础第二节——顺序结构程序设计 - Hexo"/>
+    <meta name="twitter:description" content="语言基础（二）——顺序结构程序设计我们已经学会了如何编写代码让计算机输出内容和计算简单的算术表达式。这一节我们将学习通过引入变量数据类型的概念，来介绍顺序结构程序设计。
+所谓顺序结构程序设计，就是在,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="语言基础第二节——顺序结构程序设计 - Hexo"/>
+    <meta property="og:description" content="语言基础（二）——顺序结构程序设计我们已经学会了如何编写代码让计算机输出内容和计算简单的算术表达式。这一节我们将学习通过引入变量数据类型的概念，来介绍顺序结构程序设计。
+所谓顺序结构程序设计，就是在,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">语言基础第二节——顺序结构程序设计</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">语言基础第二节——顺序结构程序设计</h1>
+        <div class="stuff">
+            <span>八月 27, 2023</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" rel="tag">算法竞赛</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="语言基础（二）——顺序结构程序设计"><a href="#语言基础（二）——顺序结构程序设计" class="headerlink" title="语言基础（二）——顺序结构程序设计"></a>语言基础（二）——顺序结构程序设计</h1><p>我们已经学会了如何编写代码让计算机输出内容和计算简单的算术表达式。这一节我们将学习通过引入变量数据类型的概念，来介绍顺序结构程序设计。</p>
+<p>所谓顺序结构程序设计，就是在编写程序时，将任务拆分成一条条的语句，按照顺序一步一步地执行这些语句。</p>
+<h3 id="一-变量的数据类型"><a href="#一-变量的数据类型" class="headerlink" title="一.变量的数据类型"></a>一.变量的数据类型</h3><p>小A中午准备做烤全鸡，为了吃上香喷喷的烤全鸡，小A准备了一只整鸡，一瓶烤肉酱，一碟佐料。小A把鸡放在了大碗里，烤肉酱放在了瓶子里，佐料放在了小碟子里。</p>
+<p>在这个事例中，鸡、烤肉酱、佐料我们可以将其看作数据，而大碗、瓶子、小碟子我们可以看作变量。鸡、烤肉酱、佐料所需的容器不同，小A不会把鸡放在碟子里，也不会把佐料放在瓶子里。在C++中同样如此，<strong>变量有许多类型，不同的变量存储的数据精度和范围不同，在实际应用中我们应根据数据的实际情况合理选择变量类型</strong>。（不然一碟烤全鸡一定很滑稽○( ＾皿＾)っ）</p>
+<p>首先我们先来了解了解常见的数据类型：</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>占用空间</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>4字节，32位</td>
+<td>-2的31次方~2的31次方-1</td>
+</tr>
+<tr>
+<td>float</td>
+<td>4字节，32位</td>
+<td>大约指数绝对值不超过37</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8字节，64位</td>
+<td>大约指数绝对值不超过307</td>
+</tr>
+<tr>
+<td>char</td>
+<td>1字节，8位</td>
+<td>-128~127</td>
+</tr>
+<tr>
+<td>long long</td>
+<td>8字节，64位</td>
+<td>-2的63次方~2的63次方-1</td>
+</tr>
+<tr>
+<td>unsigned long long</td>
+<td>8字节，64位</td>
+<td>0~2的24次方-1</td>
+</tr>
+<tr>
+<td>unsigned int</td>
+<td>4字节，32位</td>
+<td>0~2的32次方-1</td>
+</tr>
+</tbody></table>
+<p>表中取值范围中的“大约”是保守的估计，这个范围不是死的，有时可能能超过一点，有时又不能，但是不超过这个范围是安全的。另外可以看出，这些数据类型都是带符号的（signed），有正有负有0，加了unsigned的表示无符号数，只能表示0和正数，不过数据范围比带符号数大了一倍。</p>
+<p>现在我们来挨个认识一下这些类型：</p>
+<p>int:在上一节已经使用过了，只是没有提及，int类型用来存放整数。同样用来存放整数的还有long long ，后者能够表示的数据范围更大。</p>
+<p>问：那能不能只用这些大的数据类型而不用小的数据类型呢？</p>
+<p>答：不行，计算机内存有限，大的数据类型占用空间更大。</p>
+<p>float：float用来存放浮点数（还记不记得这个名词），同样用来存放浮点数的还有double，后者能表示的数据范围更大。</p>
+<p>char：char用来存放字符。</p>
+<p>那这些类型该如何使用呢？</p>
+<p>现在我们来认识认识如何声明变量。</p>
+<p>声明变量很简单，语法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">数据类型 变量名;</span><br><span class="line">例如：<span class="keyword">int</span> a;</span><br></pre></td></tr></table></figure>
+
+<p>这里我们声明了一个名叫a的变量，它的类型是int,也就是说a变量存储的是整数。（那能不能存储浮点数呢，想一想后面会说到）</p>
+<p>同理，其他类型的用法是一样的：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> b;</span><br><span class="line"><span class="keyword">double</span> c;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> d;</span><br><span class="line"><span class="keyword">char</span> x;</span><br></pre></td></tr></table></figure>
+
+<h3 id="二-变量的使用"><a href="#二-变量的使用" class="headerlink" title="二.变量的使用"></a>二.变量的使用</h3><h3 id="1-整型变量和浮点型变量"><a href="#1-整型变量和浮点型变量" class="headerlink" title="1.整型变量和浮点型变量"></a>1.整型变量和浮点型变量</h3><p>首先我们先上机实操几段代码。</p>
+<p><strong>实验1.1：将下面的代码写到IDE中，运行得到输出结果。</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">5</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    a=<span class="number">4.9</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不出意外的话，输出为：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+<p>首先看到这一行：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这里我们声明了一个变量a，它的类型是int，并将变量a<strong>初始化</strong>为5。</p>
+<p>注意，变量在使用前，一定要先进行初始化。因为你声明的变量所占用的空间是之间别的程序废弃的，鬼知道里面装着些什么，就像小A不会直接拿街上捡的大碗装烤鸡而是要先洗一洗。</p>
+<p>接着看这一行：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">4.9</span>;</span><br></pre></td></tr></table></figure>
+
+<p>欸，a变量是个整型变量，但是我们却用它来装一个浮点数，于是我们得到了一个另人迷惑的结果：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+<p>4.9为什么变成了4？这是因为a=4.9中，赋值号左边是整型，右边是浮点型，C++在自动转换的过程中会自动舍去浮点数的小数部分，保留整数部分并赋值给左边的变量a。所以跨类型的自动转换可能会造成精度损失。这种现象我们称之为<strong>自动类型转换</strong>。</p>
+<p><strong>实验1.2：先猜测以下代码的输出结果，再将下面的代码写到IDE中，运行得到输出结果。</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">    a=<span class="number">1</span>;</span><br><span class="line">    a=<span class="number">2</span>;</span><br><span class="line">    a=<span class="number">3</span>;</span><br><span class="line">    a=<span class="number">4</span>;</span><br><span class="line">    a=<span class="number">5</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不出意外的话，输出为：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>容易发现，即使第一步a变量存储的是1，但后续我们接着赋值2、3、4、5，于是变量a所装的数一步步被2、3、4、5覆盖，最终变量a装的是5。</p>
+<p><strong>例1.1：变量交换</strong></p>
+<p>现在a变量存储的是2，b变量存储的是3，小A想要交换两个变量的值即让a变量存储3，b变量存储2，请你来帮帮他。</p>
+<p><strong>分析：</strong>肯定有人是这样想的：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">2</span>,b=<span class="number">3</span>;</span><br><span class="line">a=<span class="number">3</span>;</span><br><span class="line">b=<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>不能否认确实可以这样做，但如果两个变量的初始值未知呢？</p>
+<p>考虑以下写法,猜测输出结果：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">2</span>,b=<span class="number">3</span>;</span><br><span class="line">a=b;</span><br><span class="line">b=a;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;a&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;b;</span><br></pre></td></tr></table></figure>
+
+<p>你猜这样做能不能达到我们想要的效果？</p>
+<p>其实根据上述的变量覆盖就能得知，这样写是错误的！</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=b;</span><br></pre></td></tr></table></figure>
+
+<p>此时a变量存储的值变为3，b变量存储的值仍为3。</p>
+<p>欸，不对劲了，那我2去哪了？想不到吧，2已经被3覆盖了，所以最终输出结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<p>正确的写法是这样的：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">2</span>,b=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> temp;</span><br><span class="line">temp=a;</span><br><span class="line">a=b;</span><br><span class="line">b=temp;</span><br></pre></td></tr></table></figure>
+
+<p>我们声明一个新变量temp，它的作用是暂时存储a变量原先存储的值，并将其赋给b变量，从而实现变量交换。这种方法我们称之为<strong>三变量法</strong>。</p>
+<p>还有一种写法也可以实现变量交换，这里不多做分析，各位自行理解：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">2</span>,b=<span class="number">3</span>;</span><br><span class="line">a=a+b;</span><br><span class="line">b=a-b;</span><br><span class="line">a=a-b;</span><br></pre></td></tr></table></figure>
+
+<p><strong>例1.2：玩橡皮泥</strong></p>
+<p>小 A 有两块球形橡皮泥，一个半径是 4，一个半径是 10。他想把这两块橡皮泥揉在一起，然后塑造成一个正方体，请问这个正方体的棱长是多少？如果结果不是整数，则舍去小数点之后的数字。取π=3.141593。</p>
+<p><strong>分析：</strong>$ V_{正方体}=V_{球1}+V_{球2} $</p>
+<p>​            $a=\sqrt[3]{V_{正方体}}$</p>
+<p>​    代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> PI=<span class="number">3.141593</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> r1=<span class="number">4</span>,r2=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">double</span> a,V;</span><br><span class="line">    V=<span class="number">4.0</span>/<span class="number">3</span>*PI*r1*r1*r1+<span class="number">4.0</span>/<span class="number">3</span>*PI*r2*r2*r2;</span><br><span class="line">    a=<span class="built_in">pow</span>(V,<span class="number">1.0</span>/<span class="number">3</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;(<span class="keyword">int</span>)a&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">V=<span class="number">4.0</span>/<span class="number">3</span>*PI*r1*r1*r1+<span class="number">4.0</span>/<span class="number">3</span>*PI*r2*r2*r2;</span><br></pre></td></tr></table></figure>
+
+<p>还记得吗，是4.0/3不是4/3，4.0/3得浮点数，4/3得整数（丢失精度）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="built_in">pow</span>(V,<span class="number">1.0</span>/<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这里我们使用pow函数来计算开n次方，注意不要遗忘头文件cmath。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;(<span class="keyword">int</span>)a&lt;&lt;<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这里我们运用了一个新的知识，叫做<strong>强制类型转换</strong>。</p>
+<p>如题，a变量我们定义为double型，但题目要求舍去小数点后的数字，所以我们要将a变量变成int型，这时我们需要用到强制类型转换。</p>
+<p>语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(转换后的变量类型)变量名</span><br></pre></td></tr></table></figure>
+
+<p>这里我们要将a变量变成int型，即（int）a。同理，我们也可以将整数转换为浮点数，如(double)3,就可以起到和3.0同样的效果。</p>
+<h3 id="2-字符型变量"><a href="#2-字符型变量" class="headerlink" title="2.字符型变量"></a>2.字符型变量</h3><p>到这里，我们基本了解了整型变量和浮点型变量的用法，细心的你可能察觉到了还有一种数据类型迟迟没有出场，那就是char。</p>
+<p><strong>例2.1：英文字母</strong></p>
+<p>英文中有26个字母，已知第一个字母是A，编程输出：</p>
+<p>1.M是第几个字母？</p>
+<p>2.第18个字母是什么。</p>
+<p><strong>分析：</strong>首先照抄以下代码，看不懂也抄：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans1;</span><br><span class="line">    <span class="keyword">char</span> ans2;</span><br><span class="line">    ans1=<span class="string">'M'</span>-<span class="string">'A'</span>+<span class="number">1</span>;</span><br><span class="line">    ans2=<span class="string">'A'</span>+<span class="number">18</span><span class="number">-1</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans1&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans2&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>看这一行：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ans2;</span><br></pre></td></tr></table></figure>
+
+<p>这里定义了一个char类型的变量ans2，如果你记性好的话，应该记得char类型是存储-128~127的一种整数类型。实际上，char类型更普遍的用法是存储一个字符，包括英文大小写字母、数字和标点符号等，这些字符与0-127的数字是一一对应的，详见下表：<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vd2hzc3IvdHlwb3JlL3Jhdy9tYXN0ZXIvaW1nLzIwMjAwNzI2MTIwMjM2LnBuZw?x-oss-process=image/format,png" alt="java数据类型转换_chondeng的博客-CSDN博客"></p>
+<p>这个表被称为<strong>ASCII表</strong>（American Standard Code for Information Interchange，美国信息互换标准代码）。第0~31为不可见字符，先不用管是干什么用的。从第32开始，每个编号对应一个可见字符，0从48开始，大写字母A从65开始，小写字母a从97开始。注意，这里的A’’a’都要带单引号，它们都是符号，’0’也是一样，本质上与’A’’a’相同，与阿拉伯数字0是不一样的。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ans1=<span class="string">'M'</span>-<span class="string">'A'</span>+<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这行是计算M与A之间的差距（为什么加1自己想），从ASCII表可以看出，大写字母和小写字母都是按顺序排列的。事实上，这与<code>ans1=77-65+1;</code>是等价的,因为77与’M’等价，65与’A’等价。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ans2=<span class="string">'A'</span>+<span class="number">18</span><span class="number">-1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这行是计算第18个字母是什么，易知计算出来ans2的值是82，使用cout输出ans2时就会输出与ans2存储数字对应的字符。</p>
+<h3 id="三-变量的输入输出"><a href="#三-变量的输入输出" class="headerlink" title="三.变量的输入输出"></a>三.变量的输入输出</h3><p>前面我们运用变量进行了一些简单的应用，但到现在为止的程序都是没有输入的，变量的初始值也是我们自己知道的。但是很多时候我们的程序需要接受用户的输入，相应地返回结果。就如第一节小A分汽水一题，我们直接将500.0，3写进程序，但是如果我们不知道有多少毫升分给多少个人呢？为解决这个问题，我们就需要让程序接受输入。就像小A中午能不能吃烤全鸡要看冰箱里有没有烤全鸡，如果冰箱里只有番薯，他只能吃烤番薯；如果冰箱里只有土豆，他只能吃烤土豆。</p>
+<h3 id="1-变量的输入"><a href="#1-变量的输入" class="headerlink" title="1.变量的输入"></a>1.变量的输入</h3><p><strong>实验1.1</strong>：将下面的代码写到IDE中，运行得到输出结果。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a+b;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序运行后，你会惊奇地发现，除了一个黑框外，什么也没有。</p>
+<p>我输出呢？？？</p>
+<p>不着急，先在黑框中输入以下内容，并回车。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span>（空格）<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<p>输出了什么？不出意外的话，输出结果是<code>5</code>。</p>
+<p>看到这一行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cin&gt;&gt;a&gt;&gt;b;</span><br></pre></td></tr></table></figure>
+
+<p>cin的作用便是接受输入并把输入的值装到变量里面，语法为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cin&gt;&gt;变量名1&gt;&gt;变量名2&gt;&gt;变量名3&gt;&gt;……;</span><br></pre></td></tr></table></figure>
+
+<p>先前没有输出正是因为我们没有输入变量a和变量b的值。当我们输入了变量a和变量b的值后，程序便计算a+b的值并输出。注意，一个数输入完后要按下空格键后再输入另一个数。</p>
+<p>cin后面接的是&gt;&gt;，cout后面接的是&lt;&lt;，二者是相反的，注意不要混淆。（多写写就能记住）</p>
+<h3 id="2-变量的输出"><a href="#2-变量的输出" class="headerlink" title="2.变量的输出"></a>2.变量的输出</h3><p>关于变量的输出前面已经介绍过了cout的用法，如果你觉得你行了，请做一做这道题。</p>
+<p><strong>例2-1</strong>：小A分汽水plus版</p>
+<p>小A有一瓶500ml的肥宅快乐水，他要把它均分给三位小伙伴（是的，他自己不喝，我哭死），现在他想知道每位小伙伴能分得多少ml肥宅快乐水，请你编程帮帮他，要求结果保留3为小数。</p>
+<p>保留3位小数，不好解决了吧。</p>
+<p>为了解决这个问题，在了解C++输出流写法cout的同时，我们还需要向C语言借点东西。</p>
+<p>在C语言中，输出使用printf语句，语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">printf(&quot;%d\n&quot;,a);&#x2F;&#x2F;a为整型</span><br><span class="line">printf(&quot;%f\n&quot;,b);&#x2F;&#x2F;b为浮点型</span><br><span class="line">printf(&quot;%c\n&quot;,c);&#x2F;&#x2F;c为字符</span><br></pre></td></tr></table></figure>
+
+<p>这里的\n的作用是换行。这里的<code>%d %f %c</code>称为<strong>占位符</strong>，不同的数据类型使用的占位符不同。它们在<code>“  ”</code>内为变量占一个位置，等到程序执行到这里的时候，便将相应的变量输出。举个例子：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> age=<span class="number">12</span>;</span><br><span class="line"><span class="keyword">float</span> money=<span class="number">75.5</span>;</span><br><span class="line"><span class="keyword">char</span> rank =<span class="string">'A'</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"小A今年%d岁,他口袋里有%f块钱，他考试得了%c"</span>,age,money,rank);</span><br></pre></td></tr></table></figure>
+
+<p>不出意外的话，输出结果为：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">小A今年<span class="number">12</span>岁，他口袋里有<span class="number">75.5</span>块钱，他考试得了A</span><br></pre></td></tr></table></figure>
+
+<p>在C语言中，还有许多常用的占位符,如下表：</p>
+<table>
+<thead>
+<tr>
+<th align="center">占位符</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%d</td>
+<td align="center">int类型</td>
+</tr>
+<tr>
+<td align="center">%nd(n为正整数)</td>
+<td align="center">输出一个整数，如果不足n位，前面用空格补齐直到够n位</td>
+</tr>
+<tr>
+<td align="center">%I64d</td>
+<td align="center">long long类型</td>
+</tr>
+<tr>
+<td align="center">%f</td>
+<td align="center">读入一个float类型的带小数点的浮点数，或者输出float或者double类型的浮点数，默认6位小数</td>
+</tr>
+<tr>
+<td align="center">%lf</td>
+<td align="center">读入double类型的浮点数</td>
+</tr>
+<tr>
+<td align="center">%.nf(n为正整数)</td>
+<td align="center">输出固定n位小数的浮点数</td>
+</tr>
+<tr>
+<td align="center">%0nd(n为正整数)</td>
+<td align="center">输出一个整数，如果不足n位，前面用0补齐直到够n位</td>
+</tr>
+<tr>
+<td align="center">%c</td>
+<td align="center">一个char类型字符</td>
+</tr>
+<tr>
+<td align="center">%s</td>
+<td align="center">字符串</td>
+</tr>
+</tbody></table>
+<p>回到原题，显然我们需要使用<code>%.nf</code>这个占位符，代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.3f"</span>,<span class="number">500.0</span>/<span class="number">3</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">166.667</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="四-小结"><a href="#四-小结" class="headerlink" title="四.小结"></a>四.小结</h3><p>本节我们了解了变量的数据类型，了解了变量的使用和输入输出。下一节习题课将通过几个习题来巩固本节内容，下节见！</p>
+<p><img src="https://picx.zhimg.com/80/v2-61bf6d1bba7f1c6f83892e6f059719a3_720w.jpg?source=d16d100b" alt="img"></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="http://music.163.com/song/media/outer/url?id=1877233522.mp3">
+            </audio>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
