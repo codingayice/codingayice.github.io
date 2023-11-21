@@ -74,7 +74,7 @@
         <div class="content markdown">
             <p>我们已经学会了如何编写代码让计算机输出内容和计算简单的算术表达式。这一节我们将学习通过引入变量数据类型的概念，来介绍顺序结构程序设计。</p>
 <p>所谓顺序结构程序设计，就是在编写程序时，将任务拆分成一条条的语句，按照顺序一步一步地执行这些语句。</p>
-<h3 id="一-变量的数据类型"><a href="#一-变量的数据类型" class="headerlink" title="一.变量的数据类型"></a>一.变量的数据类型</h3><p>小A中午准备做烤全鸡，为了吃上香喷喷的烤全鸡，小A准备了一只整鸡，一瓶烤肉酱，一碟佐料。小A把鸡放在了大碗里，烤肉酱放在了瓶子里，佐料放在了小碟子里。</p>
+<h3 id="变量的数据类型"><a href="#变量的数据类型" class="headerlink" title="变量的数据类型"></a>变量的数据类型</h3><p>小A中午准备做烤全鸡，为了吃上香喷喷的烤全鸡，小A准备了一只整鸡，一瓶烤肉酱，一碟佐料。小A把鸡放在了大碗里，烤肉酱放在了瓶子里，佐料放在了小碟子里。</p>
 <p>在这个事例中，鸡、烤肉酱、佐料我们可以将其看作数据，而大碗、瓶子、小碟子我们可以看作变量。鸡、烤肉酱、佐料所需的容器不同，小A不会把鸡放在碟子里，也不会把佐料放在瓶子里。在C++中同样如此，<strong>变量有许多类型，不同的变量存储的数据精度和范围不同，在实际应用中我们应根据数据的实际情况合理选择变量类型</strong>。（不然一碟烤全鸡一定很滑稽○( ＾皿＾)っ）</p>
 <p>首先我们先来了解了解常见的数据类型：</p>
 <table>
@@ -137,7 +137,9 @@
 <p>同理，其他类型的用法是一样的：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> b;</span><br><span class="line"><span class="keyword">double</span> c;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> d;</span><br><span class="line"><span class="keyword">char</span> x;</span><br></pre></td></tr></table></figure>
 
-<h3 id="二-变量的使用"><a href="#二-变量的使用" class="headerlink" title="二.变量的使用"></a>二.变量的使用</h3><h3 id="1-整型变量和浮点型变量"><a href="#1-整型变量和浮点型变量" class="headerlink" title="1.整型变量和浮点型变量"></a>1.整型变量和浮点型变量</h3><p>首先我们先上机实操几段代码。</p>
+
+
+<h3 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h3><h3 id="整型变量和浮点型变量"><a href="#整型变量和浮点型变量" class="headerlink" title="整型变量和浮点型变量"></a>整型变量和浮点型变量</h3><p>首先我们先上机实操几段代码。</p>
 <p><strong>实验1.1：将下面的代码写到IDE中，运行得到输出结果。</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">5</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    a=<span class="number">4.9</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -212,7 +214,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(转换后的变量类型)变量名</span><br></pre></td></tr></table></figure>
 
 <p>这里我们要将a变量变成int型，即（int）a。同理，我们也可以将整数转换为浮点数，如(double)3,就可以起到和3.0同样的效果。</p>
-<h3 id="2-字符型变量"><a href="#2-字符型变量" class="headerlink" title="2.字符型变量"></a>2.字符型变量</h3><p>到这里，我们基本了解了整型变量和浮点型变量的用法，细心的你可能察觉到了还有一种数据类型迟迟没有出场，那就是char。</p>
+<h3 id="字符型变量"><a href="#字符型变量" class="headerlink" title="字符型变量"></a>字符型变量</h3><p>到这里，我们基本了解了整型变量和浮点型变量的用法，细心的你可能察觉到了还有一种数据类型迟迟没有出场，那就是char。</p>
 <p><strong>例2.1：英文字母</strong></p>
 <p>英文中有26个字母，已知第一个字母是A，编程输出：</p>
 <p>1.M是第几个字母？</p>
@@ -231,8 +233,8 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ans2=<span class="string">'A'</span>+<span class="number">18</span><span class="number">-1</span>;</span><br></pre></td></tr></table></figure>
 
 <p>这行是计算第18个字母是什么，易知计算出来ans2的值是82，使用cout输出ans2时就会输出与ans2存储数字对应的字符。</p>
-<h3 id="三-变量的输入输出"><a href="#三-变量的输入输出" class="headerlink" title="三.变量的输入输出"></a>三.变量的输入输出</h3><p>前面我们运用变量进行了一些简单的应用，但到现在为止的程序都是没有输入的，变量的初始值也是我们自己知道的。但是很多时候我们的程序需要接受用户的输入，相应地返回结果。就如第一节小A分汽水一题，我们直接将500.0，3写进程序，但是如果我们不知道有多少毫升分给多少个人呢？为解决这个问题，我们就需要让程序接受输入。就像小A中午能不能吃烤全鸡要看冰箱里有没有烤全鸡，如果冰箱里只有番薯，他只能吃烤番薯；如果冰箱里只有土豆，他只能吃烤土豆。</p>
-<h3 id="1-变量的输入"><a href="#1-变量的输入" class="headerlink" title="1.变量的输入"></a>1.变量的输入</h3><p><strong>实验1.1</strong>：将下面的代码写到IDE中，运行得到输出结果。</p>
+<h3 id="变量的输入输出"><a href="#变量的输入输出" class="headerlink" title="变量的输入输出"></a>变量的输入输出</h3><p>前面我们运用变量进行了一些简单的应用，但到现在为止的程序都是没有输入的，变量的初始值也是我们自己知道的。但是很多时候我们的程序需要接受用户的输入，相应地返回结果。就如第一节小A分汽水一题，我们直接将500.0，3写进程序，但是如果我们不知道有多少毫升分给多少个人呢？为解决这个问题，我们就需要让程序接受输入。就像小A中午能不能吃烤全鸡要看冰箱里有没有烤全鸡，如果冰箱里只有番薯，他只能吃烤番薯；如果冰箱里只有土豆，他只能吃烤土豆。</p>
+<h3 id="变量的输入"><a href="#变量的输入" class="headerlink" title="变量的输入"></a>变量的输入</h3><p><strong>实验1.1</strong>：将下面的代码写到IDE中，运行得到输出结果。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a+b;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>程序运行后，你会惊奇地发现，除了一个黑框外，什么也没有。</p>
@@ -249,7 +251,7 @@
 
 <p>先前没有输出正是因为我们没有输入变量a和变量b的值。当我们输入了变量a和变量b的值后，程序便计算a+b的值并输出。注意，一个数输入完后要按下空格键后再输入另一个数。</p>
 <p>cin后面接的是&gt;&gt;，cout后面接的是&lt;&lt;，二者是相反的，注意不要混淆。（多写写就能记住）</p>
-<h3 id="2-变量的输出"><a href="#2-变量的输出" class="headerlink" title="2.变量的输出"></a>2.变量的输出</h3><p>关于变量的输出前面已经介绍过了cout的用法，如果你觉得你行了，请做一做这道题。</p>
+<h3 id="变量的输出"><a href="#变量的输出" class="headerlink" title="变量的输出"></a>变量的输出</h3><p>关于变量的输出前面已经介绍过了cout的用法，如果你觉得你行了，请做一做这道题。</p>
 <p><strong>例2-1</strong>：小A分汽水plus版</p>
 <p>小A有一瓶500ml的肥宅快乐水，他要把它均分给三位小伙伴（是的，他自己不喝，我哭死），现在他想知道每位小伙伴能分得多少ml肥宅快乐水，请你编程帮帮他，要求结果保留3为小数。</p>
 <p>保留3位小数，不好解决了吧。</p>
@@ -314,7 +316,9 @@
 <p>输出结果为：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">166.667</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="四-小结"><a href="#四-小结" class="headerlink" title="四.小结"></a>四.小结</h3><p>本节我们了解了变量的数据类型，了解了变量的使用和输入输出。下一节习题课将通过几个习题来巩固本节内容，下节见！</p>
+
+
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>本节我们了解了变量的数据类型，了解了变量的使用和输入输出。下一节习题课将通过几个习题来巩固本节内容，下节见！</p>
 <p><img src="https://picx.zhimg.com/80/v2-61bf6d1bba7f1c6f83892e6f059719a3_720w.jpg?source=d16d100b" alt="img"></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->

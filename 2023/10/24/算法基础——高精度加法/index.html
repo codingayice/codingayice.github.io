@@ -10,10 +10,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="一.引例题目描述对于输入的两个不超过1000位数字的非负整数，给出两数之和。
+    <meta name="description" content="引例题目描述对于输入的两个不超过1000位数字的非负整数，给出两数之和。
 输入格式一行，分别为两个非负整数
 输出格式一行，为两数之和
-注意到，两数位数不超过1000，传统int 或者long l,"> 
+注意到，两数位数不超过1000，传统int 或者long lon,"> 
     <meta name="author" content="Ayice"> 
     <link rel="alternative" href="atom.xml" title="穿越山和海" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -22,10 +22,10 @@
     
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="算法基础——高精度加法 - 穿越山和海"/>
-    <meta name="twitter:description" content="一.引例题目描述对于输入的两个不超过1000位数字的非负整数，给出两数之和。
+    <meta name="twitter:description" content="引例题目描述对于输入的两个不超过1000位数字的非负整数，给出两数之和。
 输入格式一行，分别为两个非负整数
 输出格式一行，为两数之和
-注意到，两数位数不超过1000，传统int 或者long l,"/>
+注意到，两数位数不超过1000，传统int 或者long lon,"/>
     
     
     
@@ -33,10 +33,10 @@
     <meta property="og:site_name" content="穿越山和海"/>
     <meta property="og:type" content="object"/>
     <meta property="og:title" content="算法基础——高精度加法 - 穿越山和海"/>
-    <meta property="og:description" content="一.引例题目描述对于输入的两个不超过1000位数字的非负整数，给出两数之和。
+    <meta property="og:description" content="引例题目描述对于输入的两个不超过1000位数字的非负整数，给出两数之和。
 输入格式一行，分别为两个非负整数
 输出格式一行，为两数之和
-注意到，两数位数不超过1000，传统int 或者long l,"/>
+注意到，两数位数不超过1000，传统int 或者long lon,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -78,13 +78,13 @@
 
         </div>
         <div class="content markdown">
-            <h1 id="一-引例"><a href="#一-引例" class="headerlink" title="一.引例"></a>一.引例</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>对于输入的两个不超过1000位数字的非负整数，给出两数之和。</p>
+            <h1 id="引例"><a href="#引例" class="headerlink" title="引例"></a>引例</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>对于输入的两个不超过1000位数字的非负整数，给出两数之和。</p>
 <h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>一行，分别为两个非负整数</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>一行，为两数之和</p>
 <p>注意到，两数位数不超过1000，传统int 或者long long 类型没有办法存储这么大的数。所以，我们引入高精度加法来解决这个问题。</p>
-<h1 id="二-高精度加法的原理"><a href="#二-高精度加法的原理" class="headerlink" title="二.高精度加法的原理"></a>二.高精度加法的原理</h1><p>高精度加法本质上是对竖式加法的模拟。我们分别用两个数组a、b来存储两个整数），数组的每一格存储一位数，接着通过循环对两个数组进行如图的竖式加法的模拟，计算得到的每一位分别放入数组c中的每一格，最后输出数组c。</p>
+<h1 id="高精度加法的原理"><a href="#高精度加法的原理" class="headerlink" title="高精度加法的原理"></a>高精度加法的原理</h1><p>高精度加法本质上是对竖式加法的模拟。我们分别用两个数组a、b来存储两个整数），数组的每一格存储一位数，接着通过循环对两个数组进行如图的竖式加法的模拟，计算得到的每一位分别放入数组c中的每一格，最后输出数组c。</p>
 <p><img src="https://s2.loli.net/2023/10/24/UAsf4zrtxNuljJk.png" alt="1.png"></p>
-<h1 id="三-高精度加法的实现"><a href="#三-高精度加法的实现" class="headerlink" title="三.高精度加法的实现"></a>三.高精度加法的实现</h1><h3 id="第一步：读入"><a href="#第一步：读入" class="headerlink" title="第一步：读入"></a>第一步：读入</h3><p>显然，我们要想进行高精度加法的运算，首先应该要先读入两个数对吧，求a+b没有a和b就很滑稽○( ＾皿＾)っHiahiahia…。这听起来像说废话，读入两个数嘛谁不会？</p>
+<h1 id="高精度加法的实现"><a href="#高精度加法的实现" class="headerlink" title="高精度加法的实现"></a>高精度加法的实现</h1><h3 id="第一步：读入"><a href="#第一步：读入" class="headerlink" title="第一步：读入"></a>第一步：读入</h3><p>显然，我们要想进行高精度加法的运算，首先应该要先读入两个数对吧，求a+b没有a和b就很滑稽○( ＾皿＾)っHiahiahia…。这听起来像说废话，读入两个数嘛谁不会？</p>
 <p>好，那根据前面原理所讲的，高精度加法中我们用数组来储存每一位数，所以我们应该先定义两个数组a和b，然后分别将两个数读入到a、b数组中去，代码应该这样写：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">100000</span>],b[<span class="number">1000000</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;a[j];</span><br></pre></td></tr></table></figure>
 
@@ -138,7 +138,9 @@
 <h3 id="第四步：输出"><a href="#第四步：输出" class="headerlink" title="第四步：输出"></a>第四步：输出</h3><p>好了，这下终于算完了，最后一步就是非常简单的输出了：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=lc;i&gt;=<span class="number">1</span>;i--)<span class="comment">//别忘了，要从高位开始输出</span></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;c[i];</span><br></pre></td></tr></table></figure>
 
-<h1 id="四-总结"><a href="#四-总结" class="headerlink" title="四.总结"></a>四.总结</h1><p>完整代码如下：</p>
+
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>完整代码如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> str1,str2;</span><br><span class="line"><span class="keyword">int</span> la,lb,lc,a[<span class="number">100000</span>],b[<span class="number">1000000</span>],c[<span class="number">10000000</span>];<span class="comment">//数组开全局，自动初始零</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;str1&gt;&gt;str2;</span><br><span class="line">    la=str1.<span class="built_in">size</span>();</span><br><span class="line">    lb=str2.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;la;i++)</span><br><span class="line">        a[la-i]=str1[i]-<span class="string">'0'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;lb;i++)</span><br><span class="line">        b[lb-i]=str2[i]-<span class="string">'0'</span>;</span><br><span class="line">    lc=<span class="built_in">max</span>(la,lb);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=lc;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        c[i]+=a[i]+b[i];</span><br><span class="line">        c[i+<span class="number">1</span>]=c[i]/<span class="number">10</span>;</span><br><span class="line">        c[i]%=<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(c[lc+<span class="number">1</span>]&gt;<span class="number">0</span>)	lc++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=lc;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;c[i];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 

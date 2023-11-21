@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="ch" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>算法基础——高精度减法 - 穿越山和海</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="12345678910title: 算法基础——高精度减法date: 2023—11-21categories:     - 算法基础    tags:     - 算法竞赛    - C++mp3,"> 
+    <meta name="author" content="Ayice"> 
+    <link rel="alternative" href="atom.xml" title="穿越山和海" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="算法基础——高精度减法 - 穿越山和海"/>
+    <meta name="twitter:description" content="12345678910title: 算法基础——高精度减法date: 2023—11-21categories:     - 算法基础    tags:     - 算法竞赛    - C++mp3,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="穿越山和海"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="算法基础——高精度减法 - 穿越山和海"/>
+    <meta property="og:description" content="12345678910title: 算法基础——高精度减法date: 2023—11-21categories:     - 算法基础    tags:     - 算法竞赛    - C++mp3,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">穿越山和海</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">算法基础——高精度减法</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">算法基础——高精度减法</h1>
+        <div class="stuff">
+            <span>十一月 21, 2023</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">title: 算法基础——高精度减法</span><br><span class="line">date: 2023—11-21</span><br><span class="line">categories: </span><br><span class="line">    - 算法基础</span><br><span class="line">    </span><br><span class="line">tags: </span><br><span class="line">    - 算法竞赛</span><br><span class="line">    - C++</span><br><span class="line">mp3: http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;2078383612.mp3</span><br><span class="line">cover: https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;04&#x2F;23&#x2F;wahBo48fieHXEJ5.jpg</span><br></pre></td></tr></table></figure>
+
+<p>高精度减法和高精度加法的原理相同，都是通过两个数组来模拟竖式运算。所以在学习高精度减法前务必保证你已经掌握高精度加法。</p>
+<h1 id="高精度减法的实现"><a href="#高精度减法的实现" class="headerlink" title="高精度减法的实现"></a>高精度减法的实现</h1><h3 id="第一步-读入"><a href="#第一步-读入" class="headerlink" title="第一步.读入"></a>第一步.读入</h3><p>这一步和高精度加法一模一样，不再赘述。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> la,lb,lc,a[<span class="number">10000005</span>],b[<span class="number">10000005</span>],c[<span class="number">10000005</span>];</span><br><span class="line"><span class="built_in">string</span> x,y;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">    la = x.<span class="built_in">size</span>();</span><br><span class="line">    lb = y.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; la ;i++)</span><br><span class="line">        a[la-i] = x[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; lb;i++)</span><br><span class="line">        b[lb-i] = y[i];</span><br><span class="line">	<span class="comment">/*计算</span></span><br><span class="line"><span class="comment">	  输出</span></span><br><span class="line"><span class="comment">	  */</span></span><br><span class="line">    retrun <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二步-计算"><a href="#第二步-计算" class="headerlink" title="第二步.计算"></a>第二步.计算</h3><p>减法在竖式运算时只需注意一点，即能不能减得下。</p>
+<p>首先判断能不能减得下,如果不能减下就要借位：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>（a[i] &lt; b[i])<span class="comment">//减不下</span></span><br><span class="line">&#123;</span><br><span class="line">    a[i] += <span class="number">10</span>;</span><br><span class="line">    a[i+<span class="number">1</span>] --;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>相减：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c[i] = a[i] - b[i];</span><br></pre></td></tr></table></figure>
+
+<p>这一步的完整代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">lc = <span class="built_in">max</span>(la,lb);<span class="comment">//lc最大是max(la,lb)，但lc不一定是max(la,lb)，后面会说</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= lc;i ++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(a[i] &lt; b[i])</span><br><span class="line">    &#123;</span><br><span class="line">        a[i] += <span class="number">10</span>;</span><br><span class="line">        a[i+<span class="number">1</span>] --;</span><br><span class="line">    &#125;</span><br><span class="line">    c[i] = a[i] - b[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步-消去前导零，c是负数？"><a href="#第三步-消去前导零，c是负数？" class="headerlink" title="第三步.消去前导零，c是负数？"></a>第三步.消去前导零，c是负数？</h3><p>在输出前我们需要解决几个问题，首先c到底有几位？</p>
+<p>现假设a&gt;b(a&lt;b后面讲），那么c的位数可能是$n$位（$n \subseteq (1,max(la,lb))$。这取决于c有多少个前导零，比如c有可能是0000012，这时我们就需要消去前导零。方法很简单，从第lc位开始消，消到不是零为止。注意，c有可能是00000……这时不能消完了，得留一位。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(c[lc] == <span class="number">0</span> &amp;&amp; lc &gt; <span class="number">1</span>)	lc--;</span><br></pre></td></tr></table></figure>
+
+<p>上述我们考虑的都是a&gt;b的情况，要是a&lt;b呢，答案岂不是个负数。解决方法很简单，只需先判断a，b大小，如果a&lt;b，就换一下，计算b-a再加个负号就好了。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(la &lt; lb || la == lb &amp;&amp; x &lt; y)<span class="comment">//两种情况，位数不同位数小则小，位数相同字典序小则小</span></span><br><span class="line">&#123;</span><br><span class="line">    swap(x,y);</span><br><span class="line">    swap(la,lb);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"-"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第四步。输出"><a href="#第四步。输出" class="headerlink" title="第四步。输出"></a>第四步。输出</h3><p>和高精度加法输出一样，注意从第lc位开始输出。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = lc;i &gt;=<span class="number">1</span>;i --)</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; c[i];</span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>完整代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> la,lb,lc,a[<span class="number">10000005</span>],b[<span class="number">10000005</span>],c[<span class="number">10000005</span>];</span><br><span class="line"><span class="built_in">string</span> x,y;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">    la = x.<span class="built_in">size</span>();</span><br><span class="line">    lb = y.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">if</span>(la &lt; lb || la == lb &amp;&amp; x &lt; y)<span class="comment">//两种情况，位数不同位数小则小，位数相同字典序小则小</span></span><br><span class="line">	&#123;</span><br><span class="line">   	 	swap(x,y);</span><br><span class="line">    	swap(la,lb);</span><br><span class="line">    	<span class="built_in">cout</span> &lt;&lt; <span class="string">"-"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; la ;i++)</span><br><span class="line">        a[la-i] = x[i]-<span class="string">'0'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; lb;i++)</span><br><span class="line">        b[lb-i] = y[i]-<span class="string">'0'</span>;</span><br><span class="line">	lc = <span class="built_in">max</span>(la,lb);<span class="comment">//lc最大是max(la,lb)，但lc不一定是max(la,lb)，后面会说</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= lc;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] &lt; b[i])</span><br><span class="line">        &#123;</span><br><span class="line">            a[i] += <span class="number">10</span>;</span><br><span class="line">            a[i+<span class="number">1</span>] --;</span><br><span class="line">        &#125;</span><br><span class="line">        c[i] = a[i] - b[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(c[lc] == <span class="number">0</span> &amp;&amp; lc &gt; <span class="number">1</span>)		lc--;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = lc;i &gt;= <span class="number">1</span>;i --)</span><br><span class="line">    	<span class="built_in">cout</span> &lt;&lt; c[i];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+</html>

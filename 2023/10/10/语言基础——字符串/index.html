@@ -10,11 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="一.字符数组在C/C++中，我们运用字符数组来存储一个字符串，定义一个字符数组语法格式为
+    <meta name="description" content="字符数组在C/C++中，我们运用字符数组来存储一个字符串，定义一个字符数组语法格式为
 1char 数组名[数组大小];
 
-1.字符数组的输入字符数组可以利用如下方式进行读入：
-123char s,"> 
+字符数组的输入字符数组可以利用如下方式进行读入：
+123char s[100,"> 
     <meta name="author" content="Ayice"> 
     <link rel="alternative" href="atom.xml" title="穿越山和海" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -23,11 +23,11 @@
     
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="语法基础——字符串 - 穿越山和海"/>
-    <meta name="twitter:description" content="一.字符数组在C/C++中，我们运用字符数组来存储一个字符串，定义一个字符数组语法格式为
+    <meta name="twitter:description" content="字符数组在C/C++中，我们运用字符数组来存储一个字符串，定义一个字符数组语法格式为
 1char 数组名[数组大小];
 
-1.字符数组的输入字符数组可以利用如下方式进行读入：
-123char s,"/>
+字符数组的输入字符数组可以利用如下方式进行读入：
+123char s[100,"/>
     
     
     
@@ -35,11 +35,11 @@
     <meta property="og:site_name" content="穿越山和海"/>
     <meta property="og:type" content="object"/>
     <meta property="og:title" content="语法基础——字符串 - 穿越山和海"/>
-    <meta property="og:description" content="一.字符数组在C/C++中，我们运用字符数组来存储一个字符串，定义一个字符数组语法格式为
+    <meta property="og:description" content="字符数组在C/C++中，我们运用字符数组来存储一个字符串，定义一个字符数组语法格式为
 1char 数组名[数组大小];
 
-1.字符数组的输入字符数组可以利用如下方式进行读入：
-123char s,"/>
+字符数组的输入字符数组可以利用如下方式进行读入：
+123char s[100,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -81,10 +81,10 @@
 
         </div>
         <div class="content markdown">
-            <h1 id="一-字符数组"><a href="#一-字符数组" class="headerlink" title="一.字符数组"></a>一.字符数组</h1><p>在C/C++中，我们运用字符数组来存储一个字符串，定义一个字符数组语法格式为</p>
+            <h1 id="字符数组"><a href="#字符数组" class="headerlink" title="字符数组"></a>字符数组</h1><p>在C/C++中，我们运用字符数组来存储一个字符串，定义一个字符数组语法格式为</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> 数组名[数组大小];</span><br></pre></td></tr></table></figure>
 
-<h3 id="1-字符数组的输入"><a href="#1-字符数组的输入" class="headerlink" title="1.字符数组的输入"></a>1.字符数组的输入</h3><p>字符数组可以利用如下方式进行读入：</p>
+<h3 id="字符数组的输入"><a href="#字符数组的输入" class="headerlink" title="字符数组的输入"></a>字符数组的输入</h3><p>字符数组可以利用如下方式进行读入：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> s[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,s);</span><br><span class="line"><span class="comment">//or cin&gt;&gt;s;</span></span><br></pre></td></tr></table></figure>
 
 <p>这种读入方式默认从s[0]开始读入，如果我们一身反骨想从s[n]开始读入，我们可以这样做：</p>
@@ -94,7 +94,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> s[<span class="number">100</span>];</span><br><span class="line">fgets(数组名,最多读入的数量,<span class="built_in">stdin</span>);</span><br></pre></td></tr></table></figure>
 
 <p>第一个参数是字符数组的名字，第二个参数是最多能够读入多少字符（自己决定，所以保险起见适当开大点），第三个参数亘古不变是stdin。</p>
-<h3 id="2-字符数组的输出"><a href="#2-字符数组的输出" class="headerlink" title="2.字符数组的输出"></a>2.字符数组的输出</h3><p>字符数组可以利用如下方式进行输出：</p>
+<h3 id="字符数组的输出"><a href="#字符数组的输出" class="headerlink" title="字符数组的输出"></a>字符数组的输出</h3><p>字符数组可以利用如下方式进行输出：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%s"</span>,s);</span><br><span class="line"><span class="comment">//or cout&lt;&lt;s;</span></span><br></pre></td></tr></table></figure>
 
 <p>我们也可以运用puts()函数输出字符数组：</p>
@@ -110,9 +110,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for(int i&#x3D;0,t&#x3D;strlen(s);i&lt;t;i++)</span><br><span class="line">	cout&lt;&lt;s[i]&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
 
 <p>此时strlen（）函数将不会重复执行，复杂度为$O(n)$。</p>
-<h1 id="二-C-党的福音——标准库string"><a href="#二-C-党的福音——标准库string" class="headerlink" title="二.C++党的福音——标准库string"></a>二.C++党的福音——标准库string</h1><p>C++的STL中包含string类型这一强力的工具，为处理字符串提供了很大的便利。</p>
+<h1 id="C-党的福音——标准库string"><a href="#C-党的福音——标准库string" class="headerlink" title="C++党的福音——标准库string"></a>C++党的福音——标准库string</h1><p>C++的STL中包含string类型这一强力的工具，为处理字符串提供了很大的便利。</p>
 <p>引入string需要包含头文件<code>#include&lt;string&gt;</code>。</p>
-<h3 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h3><p>string有四种初始化方式，分别如下：</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>string有四种初始化方式，分别如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s1;</span><br><span class="line"><span class="built_in">string</span> s2=s1;</span><br><span class="line"><span class="built_in">string</span> s3=<span class="string">"hello"</span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s4</span><span class="params">(a,<span class="string">'x'</span>)</span></span>;</span><br></pre></td></tr></table></figure>
 
 <p>第一种写法是定义了string类型的字符串s1，默认为<strong>空字符串</strong>。</p>
@@ -121,7 +121,7 @@
 <p>第四种写法较特殊，s4为a个字符x拼接成的字符串，如</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s4</span><span class="params">(<span class="number">10</span>,<span class="string">'c'</span>)</span></span>;</span><br><span class="line"><span class="comment">//则s4='cccccccccc'</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="2-相关操作"><a href="#2-相关操作" class="headerlink" title="2.相关操作"></a>2.相关操作</h3><p>string类型字符串可直接利用cin读入：</p>
+<h3 id="相关操作"><a href="#相关操作" class="headerlink" title="相关操作"></a>相关操作</h3><p>string类型字符串可直接利用cin读入：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;s;</span><br></pre></td></tr></table></figure>
 
 <p>这种写法同样读入到空格或回车终止，故如果我们想输入含空格的字符串，需要使用getline()函数：</p>
@@ -158,7 +158,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s5=<span class="string">"hello"</span>+<span class="string">"."</span>+s1;</span><br></pre></td></tr></table></figure>
 
 <p>根据上述内容，这种写法显然是错误的，因为赋值号右侧两个字符直接相加，并且s1无法帮他们转换，因为s1在最后头，而计算是从左往右的。</p>
-<h3 id="3-遍历string中的字符"><a href="#3-遍历string中的字符" class="headerlink" title="3.遍历string中的字符"></a>3.遍历string中的字符</h3><p>写法1：</p>
+<h3 id="遍历string中的字符"><a href="#遍历string中的字符" class="headerlink" title="遍历string中的字符"></a>遍历string中的字符</h3><p>写法1：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.<span class="built_in">size</span>();i++)</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;s[i]&lt;&lt;<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
 
 <p>写法2（C++专属）：</p>
