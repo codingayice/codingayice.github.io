@@ -125,6 +125,18 @@ C++风格的程序C++版的“hello world”程序如下，不多阐述：
 
 
 
+<h3 id="nth-element"><a href="#nth-element" class="headerlink" title="nth_element"></a>nth_element</h3><p>nth_element的作用是查找第n小的元素。</p>
+<p><strong>nth_element的用法</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nth_element(起始地址，查找元素的下标，最后一个元素地址+<span class="number">1</span>);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">int a[10]=&#123;0,1,6,5,3,7,9,8,2,4&#125;;</span></span><br><span class="line"><span class="comment">nth_element(a,a+6,a+10);//查找第6小的元素</span></span><br><span class="line"><span class="comment">cout &lt;&lt; a[6];//此时第6小的元素已经放到a[6]</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="lower-bound-amp-amp-upper-bound"><a href="#lower-bound-amp-amp-upper-bound" class="headerlink" title="lower_bound &amp;&amp; upper_bound"></a>lower_bound &amp;&amp; upper_bound</h3><p>lower_bound和upper_bound都是利用二分的方法在已排好序的数组中进行查找。</p>
+<p><strong>lower_bound和upper_bound的用法</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">从小到大排序的数组中：</span><br><span class="line"><span class="keyword">int</span> index=lower_bound(<span class="built_in">begin</span>,<span class="built_in">end</span>,sum)-<span class="built_in">begin</span>;<span class="comment">//查找从数组begin位置到end-1位置之间第一个大于等于sum的数的地址，减去begin得到sum的下标</span></span><br><span class="line"><span class="keyword">int</span> index=upper_bound(<span class="built_in">begin</span>,<span class="built_in">end</span>,sum)-<span class="built_in">begin</span>;<span class="comment">//查找从数组begin位置到end-1位置之间第一个大于sum的数的地址，减去begin得到sum下标</span></span><br><span class="line">从大到小排序的数组中：</span><br><span class="line"><span class="keyword">int</span> index=lower_bound(<span class="built_in">begin</span>, <span class="built_in">end</span>, sum, greater&lt;<span class="keyword">int</span>&gt;());<span class="comment">//查找从数组begin位置到end-1位置之间第一个小于等于sum的数的地址，减去begin得到sum的下标</span></span><br><span class="line"><span class="keyword">int</span> index=upper_bound(<span class="built_in">begin</span>,<span class="built_in">end</span>,sum,greater&lt;<span class="keyword">int</span>&gt;());<span class="comment">//查找从数组begin位置到end-1位置之间第一个小于sum的数的地址，减去begin得到sum的下标</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><p>vector是一个容器，简单来说是一个不定长数组，能够自动扩展存储空间,。</p>
 <p>使用时需包含头文件<code>#include&lt;vector&gt;</code></p>
 <p><strong>vector数组的定义</strong></p>
