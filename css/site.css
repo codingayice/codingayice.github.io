@@ -1,4 +1,35 @@
 
+/*内容标题*/
+.content h1,
+.content h2,
+.content h3 {
+    border-left-style: solid;
+    border-left-color: #5A83DE;
+    border-left-width: 6px;
+    border-radius: 7px;
+    padding-left: 25px;
+    color: #5A83DE !important;
+}
+
+.content h4,
+.content h5,
+.content h6 {
+    border-left-style: solid;
+    border-left-color: #5A83DE;
+    border-left-width: 5px;
+    border-radius: 5px;
+    padding-left: 15px;
+    color: #5A83DE !important;
+}
+
+.set h2,
+.timeline h2,
+.timeline h3 {
+    border-left-style: none;
+    padding-left: 0;
+    color: #333333 !important;
+}
+
 /*更新时间*/
 .updated {
     width: 100%;
