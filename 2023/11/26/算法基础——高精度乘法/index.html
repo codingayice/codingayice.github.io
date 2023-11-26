@@ -82,6 +82,7 @@
 
 
 <h3 id="2-计算"><a href="#2-计算" class="headerlink" title="2.计算"></a>2.计算</h3><p>乘法的竖式运算挺有意思，我们考虑一下,a[i]*b[j]=c[?],这个？是什么，也就是说这个得到的结果应该落到哪一位？</p>
+<p><img src="https://s2.loli.net/2023/11/26/XMlY3D4PuRt17ec.png" alt="1.png"></p>
 <p>我们来举例模拟模拟这个操作，假设200*4000，得到800000，这个计算中，a[3]=2,b[4]=4,c[6]=8，也就是说结果落到了第6位，这个第六位是怎么来的呢？这样想，2后面两个0，2是第三位，4后面三个0，4是第四位，得到800000，其实就是8后面加（200的位数-1+4000的位数-1+1 = 200的位数+4000的位数-1），即i+j-1。于是我们得到了高精度乘法的最关键的式子：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c[i+j<span class="number">-1</span>]+=a[i]*b[j];<span class="comment">//是+=不是=</span></span><br></pre></td></tr></table></figure>
 
