@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="ch" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>算法基础——高精度乘法 - 穿越山和海</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="高精度乘法的原理高精度类算法的思路都是相同的，即用两个数组模拟竖式运算，不过高精度乘法的竖式运算麻烦点，因为乘法不是加法和减法一样的简单的线性运算。
+高精度乘法的实现1.读入都是一样的，不多赘述：
+,"> 
+    <meta name="author" content="Ayice"> 
+    <link rel="alternative" href="atom.xml" title="穿越山和海" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="算法基础——高精度乘法 - 穿越山和海"/>
+    <meta name="twitter:description" content="高精度乘法的原理高精度类算法的思路都是相同的，即用两个数组模拟竖式运算，不过高精度乘法的竖式运算麻烦点，因为乘法不是加法和减法一样的简单的线性运算。
+高精度乘法的实现1.读入都是一样的，不多赘述：
+,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="穿越山和海"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="算法基础——高精度乘法 - 穿越山和海"/>
+    <meta property="og:description" content="高精度乘法的原理高精度类算法的思路都是相同的，即用两个数组模拟竖式运算，不过高精度乘法的竖式运算麻烦点，因为乘法不是加法和减法一样的简单的线性运算。
+高精度乘法的实现1.读入都是一样的，不多赘述：
+,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">穿越山和海</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">算法基础——高精度乘法</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">算法基础——高精度乘法</h1>
+        <div class="stuff">
+            <span>十一月 26, 2023</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" rel="tag">算法竞赛</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="高精度乘法的原理"><a href="#高精度乘法的原理" class="headerlink" title="高精度乘法的原理"></a>高精度乘法的原理</h1><p>高精度类算法的思路都是相同的，即用两个数组模拟竖式运算，不过高精度乘法的竖式运算麻烦点，因为乘法不是加法和减法一样的简单的线性运算。</p>
+<h1 id="高精度乘法的实现"><a href="#高精度乘法的实现" class="headerlink" title="高精度乘法的实现"></a>高精度乘法的实现</h1><h3 id="1-读入"><a href="#1-读入" class="headerlink" title="1.读入"></a>1.读入</h3><p>都是一样的，不多赘述：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> x,y;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">100005</span>],a[<span class="number">100005</span>],c[<span class="number">1000005</span>,la,lb;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">    la=x.<span class="built_in">size</span>();</span><br><span class="line">    lb=y.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;la;i++)</span><br><span class="line">        a[la-i]=x[i]-<span class="string">'0'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;lb;i++)</span><br><span class="line">        b[lb-i]=y[i]-<span class="string">'0'</span>;</span><br><span class="line">    <span class="comment">/*操作</span></span><br><span class="line"><span class="comment">      输出</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-计算"><a href="#2-计算" class="headerlink" title="2.计算"></a>2.计算</h3><p>乘法的竖式运算挺有意思，我们考虑一下,a[i]*b[j]=c[?],这个？是什么，也就是说这个得到的结果应该落到哪一位？</p>
+<p>我们来举例模拟模拟这个操作，假设200*4000，得到800000，这个计算中，a[3]=2,b[4]=4,c[6]=8，也就是说结果落到了第6位，这个第六位是怎么来的呢？这样想，2后面两个0，2是第三位，4后面三个0，4是第四位，得到800000，其实就是8后面加（200的位数-1+4000的位数-1+1 = 200的位数+4000的位数-1），即i+j-1。于是我们得到了高精度乘法的最关键的式子：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c[i+j<span class="number">-1</span>]+=a[i]*b[j];<span class="comment">//是+=不是=</span></span><br></pre></td></tr></table></figure>
+
+<p>接着处理进位：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c[i+j]+=c[i+j<span class="number">-1</span>]/<span class="number">10</span>;<span class="comment">//是+=不是=</span></span><br><span class="line">c[i+j<span class="number">-1</span>]%=<span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+
+<p>完整代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=la;i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=lb;j++)</span><br><span class="line">    &#123;</span><br><span class="line">        c[i+j<span class="number">-1</span>]+=a[i]*b[j];</span><br><span class="line">        c[i+j]+=c[i+j<span class="number">-1</span>]/<span class="number">10</span>;</span><br><span class="line">        c[i+j<span class="number">-1</span>]%=<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-消去前导零"><a href="#3-消去前导零" class="headerlink" title="3.消去前导零"></a>3.消去前导零</h3><p>首先求得到的数组c的长度lc,易知$lc=la+lb-1| | la+lb$,不多解释自己算一算验证一下，这里我们取最大。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int lc&#x3D;la+lb;</span><br></pre></td></tr></table></figure>
+
+<p>消去前导零：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(c[lc]==<span class="number">0</span> &amp;&amp; lc&gt;<span class="number">1</span>)lc--;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-输出"><a href="#4-输出" class="headerlink" title="4.输出"></a>4.输出</h3><p>最后输出就好了：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=lc;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">    	<span class="built_in">cout</span>&lt;&lt;c[i];</span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>完整代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> la,lb,a[<span class="number">1000005</span>],b[<span class="number">1000005</span>],c[<span class="number">1000005</span>];</span><br><span class="line"><span class="built_in">string</span> x,y;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">    la=x.<span class="built_in">size</span>();</span><br><span class="line">    lb=y.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;la;i++)</span><br><span class="line">        a[la-i]=x[i]-<span class="string">'0'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;lb;i++)</span><br><span class="line">        b[lb-i]=y[i]-<span class="string">'0'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=la;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=lb;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            c[i+j<span class="number">-1</span>]+=a[i]*b[j];</span><br><span class="line">            c[i+j]+=c[i+j<span class="number">-1</span>]/<span class="number">10</span>;</span><br><span class="line">            c[i+j<span class="number">-1</span>]%=<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">   <span class="keyword">int</span> lc=la+lb;</span><br><span class="line">    <span class="keyword">while</span>(c[lc]==<span class="number">0</span> &amp;&amp; lc&gt;<span class="number">1</span>)lc--;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=lc;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;c[i];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="http://music.163.com/song/media/outer/url?id=520482501.mp3">
+            </audio>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+</html>
